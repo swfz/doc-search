@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS docs (
+  url VARCHAR(255) NOT NULL PRIMARY KEY,
+  title VARCHAR(255),
+  media VARCHAR(20),
+  content TEXT,
+  FULLTEXT(content) WITH PARSER ngram
+) CHARACTER SET utf8mb4
